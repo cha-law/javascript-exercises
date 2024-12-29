@@ -1,5 +1,10 @@
-const sumAll = function() {
+const sumAll = function(firstNum, lastNum) {
+    let sum = 0;
 
+    for (i = firstNum; i <= lastNum; i++) {
+        sum += i;
+    }
+    return sum;
 };
 
 // Do not edit below this line
