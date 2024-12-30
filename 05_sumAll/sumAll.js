@@ -1,7 +1,20 @@
 const sumAll = function(firstNum, lastNum) {
+
+    if ((!Number.isInteger(firstNum)) || (!Number.isInteger(lastNum))) return "ERROR";
+
     let sum = 0;
 
-    for (i = firstNum; i <= lastNum; i++) {
+    if (firstNum > lastNum) {
+        var smallNumber = lastNum;
+        var largeNumber = firstNum;
+    } else {
+        var smallNumber = firstNum;
+        var largeNumber = lastNum;
+    }
+
+    if (smallNumber < 0 || largeNumber < 0) return "ERROR";
+
+    for (i = smallNumber; i <= largeNumber; i++) {
         sum += i;
     }
     return sum;
